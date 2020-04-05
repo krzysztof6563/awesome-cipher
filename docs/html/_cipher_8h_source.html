@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>awesome-cipher: Plik źródłowy /home/krzysztof/awesome-cipher/src/cipher/Cipher.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">awesome-cipher
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ee21bfc4f90030ac4cfff1a56ae9ef88.html">cipher</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cipher.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cipher_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CIPHER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CIPHER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_cipher.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cipher.html">Cipher</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="class_cipher.html#a6a61077eca3ccd5900f92ceac58fb09c">Cipher</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="class_cipher.html#a6a61077eca3ccd5900f92ceac58fb09c">Cipher</a>(std::string text);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_cipher.html#ab9426e3795c380fa61120e163df7b9cb">setText</a>(std::string text);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        std::string <a class="code" href="class_cipher.html#ad6bb8baefaface4c9f57b0aaa55c421d">getText</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_cipher.html#af3156db384064ded7d23b659e8293f47">cipher</a>() = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_cipher.html#af5e8dc8574f9c08da51feeac9b8494b2">decipher</a>() = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::string text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CIPHER_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_cipher_8h_html"><div class="ttname"><a href="_cipher_8h.html">Cipher.h</a></div></div>
+<div class="ttc" id="aclass_cipher_html_ad6bb8baefaface4c9f57b0aaa55c421d"><div class="ttname"><a href="class_cipher.html#ad6bb8baefaface4c9f57b0aaa55c421d">Cipher::getText</a></div><div class="ttdeci">std::string getText()</div><div class="ttdef"><b>Definition:</b> Cipher.cpp:16</div></div>
+<div class="ttc" id="aclass_cipher_html_af3156db384064ded7d23b659e8293f47"><div class="ttname"><a href="class_cipher.html#af3156db384064ded7d23b659e8293f47">Cipher::cipher</a></div><div class="ttdeci">virtual void cipher()=0</div></div>
+<div class="ttc" id="aclass_cipher_html"><div class="ttname"><a href="class_cipher.html">Cipher</a></div><div class="ttdef"><b>Definition:</b> Cipher.h:6</div></div>
+<div class="ttc" id="aclass_cipher_html_af5e8dc8574f9c08da51feeac9b8494b2"><div class="ttname"><a href="class_cipher.html#af5e8dc8574f9c08da51feeac9b8494b2">Cipher::decipher</a></div><div class="ttdeci">virtual void decipher()=0</div></div>
+<div class="ttc" id="aclass_cipher_html_ab9426e3795c380fa61120e163df7b9cb"><div class="ttname"><a href="class_cipher.html#ab9426e3795c380fa61120e163df7b9cb">Cipher::setText</a></div><div class="ttdeci">void setText(std::string text)</div><div class="ttdef"><b>Definition:</b> Cipher.cpp:11</div></div>
+<div class="ttc" id="aclass_cipher_html_a6a61077eca3ccd5900f92ceac58fb09c"><div class="ttname"><a href="class_cipher.html#a6a61077eca3ccd5900f92ceac58fb09c">Cipher::Cipher</a></div><div class="ttdeci">Cipher()</div><div class="ttdef"><b>Definition:</b> Cipher.cpp:3</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

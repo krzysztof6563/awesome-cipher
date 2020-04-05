@@ -1,0 +1,6 @@
+<map id="Graficzna hierarchia klas" name="Graficzna hierarchia klas">
+<area shape="rect" id="node1" href="$class_cipher.html" title=" " alt="" coords="5,56,65,83"/>
+<area shape="rect" id="node2" href="$class_caesar_cipher.html" title=" " alt="" coords="127,5,229,32"/>
+<area shape="rect" id="node3" href="$class_number_cipher.html" title=" " alt="" coords="125,56,231,83"/>
+<area shape="rect" id="node4" href="$class_substitution_cipher.html" title=" " alt="" coords="113,107,243,133"/>
+</map>

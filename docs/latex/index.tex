@@ -1,0 +1,23 @@
+Projekt na przedmiot Techniki Programowania\doxysubsection{Jak skompilować?}\label{index_autotoc_md1}
+Należy użyc cmake, a następnie narzędzi jakie cmake zbudował. Na Linuxie wygląda to następująco\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake .}
+\DoxyCodeLine{make }
+\end{DoxyCode}
+
+
+Na Windowsie da się~otworzyć w Visual Studio. {\texttt{ https\+://docs.\+microsoft.\+com/pl-\/pl/cpp/build/cmake-\/projects-\/in-\/visual-\/studio?view=vs-\/2019}}
+
+Skompilowane pliki znajdują się w folderze ./bin
+
+Pliki $\ast$.o znajdują się w katalogu ./src/\+C\+Make\+Files/awesome-\/cipher.dir\doxysubsection{Co z dokumentacją?}\label{index_autotoc_md2}
+Dokumntacja jest generowana za pomocą aplikacji Doxygen. Plik konfiguracyjny znajduje się w ./docs/\+Doxyfile. Aby wygenerować nową wersję wystarczy uruchomić następujące polecenia.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd docs}
+\DoxyCodeLine{doxygen Doxyfile}
+\end{DoxyCode}
+ 

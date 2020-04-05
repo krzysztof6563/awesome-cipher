@@ -1,0 +1,6 @@
+<map id="Cipher" name="Cipher">
+<area shape="rect" id="node1" title=" " alt="" coords="154,5,214,32"/>
+<area shape="rect" id="node2" href="$class_caesar_cipher.html" title=" " alt="" coords="5,80,107,107"/>
+<area shape="rect" id="node3" href="$class_number_cipher.html" title=" " alt="" coords="131,80,237,107"/>
+<area shape="rect" id="node4" href="$class_substitution_cipher.html" title=" " alt="" coords="262,80,391,107"/>
+</map>

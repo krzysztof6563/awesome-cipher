@@ -1,0 +1,83 @@
+\doxysection{Dokumentacja klasy Cipher}
+\label{class_cipher}\index{Cipher@{Cipher}}
+
+
+{\ttfamily \#include $<$Cipher.\+h$>$}
+
+Diagram dziedziczenia dla Cipher\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cipher}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Cipher} ()
+\item 
+\textbf{ Cipher} (std\+::string text)
+\item 
+void \textbf{ set\+Text} (std\+::string text)
+\item 
+std\+::string \textbf{ get\+Text} ()
+\item 
+virtual void \textbf{ cipher} ()=0
+\item 
+virtual void \textbf{ decipher} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\label{class_cipher_a6a61077eca3ccd5900f92ceac58fb09c}} 
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\doxysubsubsection{Cipher()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cipher\+::\+Cipher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_cipher_a7f188acd2c7fc47909f255a33965550f}} 
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\doxysubsubsection{Cipher()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cipher\+::\+Cipher (\begin{DoxyParamCaption}\item[{std\+::string}]{text }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\label{class_cipher_af3156db384064ded7d23b659e8293f47}} 
+\index{Cipher@{Cipher}!cipher@{cipher}}
+\index{cipher@{cipher}!Cipher@{Cipher}}
+\doxysubsubsection{cipher()}
+{\footnotesize\ttfamily virtual void Cipher\+::cipher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementowany w \textbf{ Caesar\+Cipher} \doxyref{}{str.}{class_caesar_cipher_a9761c609f9486fa5741c47a9cf47ca5d}, \textbf{ Number\+Cipher} \doxyref{}{str.}{class_number_cipher_a4dce00412b688baffc788beb193d59ea} i \textbf{ Substitution\+Cipher} \doxyref{}{str.}{class_substitution_cipher_aa4abdf5257881d2600d4f003d1b106b5}.
+
+\mbox{\label{class_cipher_af5e8dc8574f9c08da51feeac9b8494b2}} 
+\index{Cipher@{Cipher}!decipher@{decipher}}
+\index{decipher@{decipher}!Cipher@{Cipher}}
+\doxysubsubsection{decipher()}
+{\footnotesize\ttfamily virtual void Cipher\+::decipher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementowany w \textbf{ Caesar\+Cipher} \doxyref{}{str.}{class_caesar_cipher_a3841da2c492f313caad99978cc93b3ea}, \textbf{ Number\+Cipher} \doxyref{}{str.}{class_number_cipher_ab59244d57e8cc3a147b7f1286528738f} i \textbf{ Substitution\+Cipher} \doxyref{}{str.}{class_substitution_cipher_a3122aa1d8dce557f815193039a0b0569}.
+
+\mbox{\label{class_cipher_ad6bb8baefaface4c9f57b0aaa55c421d}} 
+\index{Cipher@{Cipher}!getText@{getText}}
+\index{getText@{getText}!Cipher@{Cipher}}
+\doxysubsubsection{getText()}
+{\footnotesize\ttfamily std\+::string Cipher\+::get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_cipher_ab9426e3795c380fa61120e163df7b9cb}} 
+\index{Cipher@{Cipher}!setText@{setText}}
+\index{setText@{setText}!Cipher@{Cipher}}
+\doxysubsubsection{setText()}
+{\footnotesize\ttfamily void Cipher\+::set\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{text }\end{DoxyParamCaption})}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/awesome-\/cipher/src/cipher/\textbf{ Cipher.\+h}\item 
+/home/krzysztof/awesome-\/cipher/src/cipher/\textbf{ Cipher.\+cpp}\end{DoxyCompactItemize}
