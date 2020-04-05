@@ -36,15 +36,15 @@ XBCLGXB
 Należy użyc cmake, a następnie narzędzi jakie cmake zbudował. Na Linuxie wygląda to następująco:
 
 ```
-cmake .
-make 
+cmake -B ./build
+make
 ```
 Na Windowsie da się otworzyć w Visual Studio. 
 [https://docs.microsoft.com/pl-pl/cpp/build/cmake-projects-in-visual-studio?view=vs-2019](https://docs.microsoft.com/pl-pl/cpp/build/cmake-projects-in-visual-studio?view=vs-2019)
 
-Skompilowane pliki znajdują się w folderze ./bin
+Skompilowane pliki znajdują się w folderze ./build/src
 
-Pliki *.o znajdują się w katalogu ./src/CMakeFiles/awesome-cipher.dir 
+Pliki *.o znajdują się w katalogu ./build/src/CMakeFiles/awesome-cipher.dir 
 
 ## Co z dokumentacją?
 Dokumntacja jest generowana za pomocą aplikacji Doxygen. Plik konfiguracyjny znajduje się w ./docs/Doxyfile. Aby wygenerować nową wersję wystarczy uruchomić następujące polecenia.
