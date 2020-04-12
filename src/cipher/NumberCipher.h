@@ -5,8 +5,9 @@
 
 class NumberCipher : public Cipher {
 	public:
-		void cipher();
-		void decipher();
+		void cipher(std::string text);
+		void decipher(std::string text);
+		bool validateInput(std::string data, int mode);
 };
 
 #endif /* NUMBERCIPHER_H */

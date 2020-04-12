@@ -1,9 +1,16 @@
 #include "SubstitutionCipher.h"
 
-void SubstitutionCipher::cipher() {
-
+void SubstitutionCipher::cipher(std::string text) {
+    std::string processedData = "";
+    this->text = processedData;
 }
 
-void SubstitutionCipher::decipher() {
+void SubstitutionCipher::decipher(std::string text) {
+    std::string processedData = "";
+    this->text = processedData;
+}
 
+bool SubstitutionCipher::validateInput(std::string data, int mode) {
+
+    return true;
 }

@@ -4,9 +4,10 @@ add_executable(awesome-cipher
  cipher/Cipher.h
  cipher/CaesarCipher.cpp
  cipher/CaesarCipher.h
- cipher/NumberCiphher.cpp
- cipher/NumberCiphher.h
+ cipher/NumberCipher.cpp
+ cipher/NumberCipher.h
  cipher/SubstitutionCipher.cpp
  cipher/SubstitutionCipher.h
- 
+ Validator.cpp
+ Validator.h
  )

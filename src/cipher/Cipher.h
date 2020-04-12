@@ -2,18 +2,16 @@
 #define CIPHER_H
 
 #include <string>
+#include <regex>
+#include <iostream>
 
 class Cipher {
 	public:
 		Cipher();
-		Cipher(std::string text);
 
-		void setText(std::string text);
-		std::string getText();
-		virtual void cipher() = 0;
-		virtual void decipher() = 0;
-
-	private:
+		virtual void cipher(std::string text) = 0;
+		virtual void decipher(std::string text) = 0;
+		virtual bool validateInput(std::string data, int mode) = 0;
 		std::string text = "";
 };
 
