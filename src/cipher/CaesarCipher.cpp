@@ -44,9 +44,11 @@ void CaesarCipher::decipher(std::string text) {
 
 bool CaesarCipher::validateInput(std::string data, int mode) {
     std::regex validationRegex("[A-Za-z]+");
-    if (std::regex_match(data, validationRegex)) {
+    bool match = std::regex_match(data, validationRegex);
+    if (match) {
         return true;
     } else {
+        std::cout << "Nieprawidłowy format danych." << std::endl;
         return false;
     }
 }
