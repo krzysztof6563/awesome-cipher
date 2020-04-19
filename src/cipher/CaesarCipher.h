@@ -15,7 +15,9 @@ class CaesarCipher : public Cipher {
 		bool validateInput(std::string data, int mode);
 
 	private:
-		int offset = 13;
+		std::string alphabet = "abcdefghijklmnopqrstuvwxyz";
+		
+		int offset = 7;
 };
 
 #endif /* CEASERCIPHER_H */

@@ -3,17 +3,18 @@
 void CaesarCipher::cipher(std::string text) {
     std::string processedData = "";
     for (char c : text) {
-        int newChar = c+this->offset;
-        if (c >= 65 && c <= 90) {
-            if (newChar > 90) {
-                newChar = 65 + (newChar - 90 - 1);
-            }
-        } else if (c >= 97 && c <= 122) {
-            if (newChar > 122) {
-                newChar = 97 + (newChar - 122 - 1);
-            }
+        bool isUpper = std::isupper(c);
+        if (isUpper) {
+            c = std::tolower(c);
         }
-        processedData += (char)newChar;
+        std::size_t found = alphabet.find(c);
+        if (found != std::string::npos) {
+            char newChar = alphabet[(found+offset)%alphabet.length()];
+            if (isUpper) {
+                newChar = std::toupper(newChar);
+            }
+            processedData += isUpper ? std::toupper(newChar) : newChar;
+        }
     }
     this->text = processedData;
 }
@@ -21,17 +22,22 @@ void CaesarCipher::cipher(std::string text) {
 void CaesarCipher::decipher(std::string text) {
     std::string processedData = "";
     for (char c : text) {
-        int newChar = c-this->offset;
-        if (c >= 65 && c <= 90) {
-            if (newChar < 65) {
-                newChar = 90 - (65 - newChar - 1);
-            }
-        } else if (c >= 97 && c <= 122) {
-            if (newChar < 97) {
-                newChar = 122 - (97 - newChar - 1);
-            }
+        bool isUpper = std::isupper(c);
+        if (isUpper) {
+            c = std::tolower(c);
         }
-        processedData += (char)newChar;
+        std::size_t found = alphabet.find(c);
+        if (found != std::string::npos) {
+            int newPos = found-offset;
+            if (newPos < 0) {
+                newPos = alphabet.length() + newPos;
+            } 
+            char newChar = alphabet[newPos];
+            if (isUpper) {
+                newChar = std::toupper(newChar);
+            }
+            processedData += isUpper ? std::toupper(newChar) : newChar;
+        }
     }
     this->text = processedData;
 }
