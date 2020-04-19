@@ -60,7 +60,7 @@ auto main(int argc, char* argv[]) -> int {
 	} while (!Validator::validateIntRangeInput(algorithm, 1, 3));
 	Cipher* selectedCipher = selectCipher(algorithm);
 
-	if (selectCipher == nullptr) {
+	if (selectedCipher == nullptr) {
 		throw "Nie znaleziono alogrytmu szyfrowania.";
 	}
 
