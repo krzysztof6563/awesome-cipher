@@ -8,13 +8,16 @@
 #include "Validator.h"
 
 void showIntro() {
-	std::cout << "Krzysztof Kowalski [182632] " << std::endl
-			  << "Krzysztof Michalski [171719] " << std::endl
-	          << "Program szyfrujący i deszyfrujący tekst." << std::endl
-	          << "Wybierz metodę działania programu:" << std::endl
-	          << "[1] Zaszyfrowanie tesktu" << std::endl
-	          << "[2] Odszyforwanie tekstu" << std::endl
-	;
+	std::cout << "----------------------------------------------" << std::endl
+		<< "|        Krzysztof Kowalski [182632]         |" << std::endl
+		<< "|        Krzysztof Michalski [171719]        |" << std::endl
+		<< "|  Program szyfrujacy i deszyfrujacy tekst.  |" << std::endl
+		<< "----------------------------------------------" << std::endl
+		<< std::endl
+		<< "Wybierz metode dzialania programu:" << std::endl
+		<< "[1] Zaszyfrowanie tesktu" << std::endl
+		<< "[2] Odszyforwanie tekstu" << std::endl
+		<< std::endl;
 	return;
 }
 
@@ -45,6 +48,8 @@ Cipher* selectCipher(int choice) {
 }
 
 auto main(int argc, char* argv[]) -> int {
+
+
 	int mode = 0;
 	int algorithm = 0;
 	std::string data;
