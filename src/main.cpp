@@ -52,16 +52,29 @@ auto main(int argc, char* argv[]) -> int {
 
 	int mode = 0;
 	int algorithm = 0;
+	std::string tmpChoice;
 	std::string data;
 
 	showIntro();
 	do {
-		std::cin >> mode;
+		std::cin >> tmpChoice;
+		try {
+			mode = std::stoi(tmpChoice);
+		} catch (...) {
+			std::cout << "Proszę podać tylko cyfry." << std::endl;
+			mode = -1;
+		}
 	} while (!Validator::validateIntRangeInput(mode, 1, 2));
 	
 	showCipherSelect();
 	do {
-		std::cin >> algorithm;
+		std::cin >> tmpChoice;
+		try {
+			algorithm = std::stoi(tmpChoice);
+		} catch (...) {
+			std::cout << "Proszę podać tylko cyfry." << std::endl;
+			algorithm = -1;
+		}
 	} while (!Validator::validateIntRangeInput(algorithm, 1, 3));
 	Cipher* selectedCipher = selectCipher(algorithm);
 
@@ -70,8 +83,9 @@ auto main(int argc, char* argv[]) -> int {
 	}
 
 	showDataInput();
+	std::cin.ignore();
 	do {
-		std::cin >> data;
+		std::getline(std::cin, data);
 	} while (!selectedCipher->validateInput(data, mode));
 	
 	switch (mode) {

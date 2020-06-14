@@ -38,7 +38,7 @@ bool NumberCipher::validateInput(std::string data, int mode) {
     bool match = false;
     if (mode == 1) {
         //szyfrowanie
-        std::regex validationRegex("[A-Za-z]+");
+        std::regex validationRegex("[A-Za-z ]+");
         match = std::regex_match(data, validationRegex);
     } else if (mode == 2) {
         //odszyfrowanie
@@ -48,7 +48,13 @@ bool NumberCipher::validateInput(std::string data, int mode) {
     if (match) {
         return true;
     } else {
-        std::cout << "Nieprawidłowy format danych." << std::endl;
+        std::cout << "Nieprawidlowy format danych." << std::endl;
+        if (mode == 1) {
+            std::cout << "Wpisz jedynie litery alfabetu (bez polskich znakow) i spacje" << std::endl;
+        } else if (mode == 2) {
+            std::cout << "Wpisz jedynie cyfry i przecinki. Przyklad prawidlowych danych: \"192,321,431,134,100\"" << std::endl;
+        }
+
         return false;
     }
 }

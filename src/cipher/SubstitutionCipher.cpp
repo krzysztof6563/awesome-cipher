@@ -1,12 +1,18 @@
 #include "SubstitutionCipher.h"
 
-std::string alphabet = "abcdefghijklmnopqrstuvwxyz ";
-std::string alphabet_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
-std::string cipher_alphabet = "tifozrsbncgmdpaehvjkqyluxw ";
-std::string cipher_alphabet_upper = "TIFOZRSBNCGMDPAEHVJKQYLUXW ";
+SubstitutionCipher::SubstitutionCipher() {
+    std::string choice;
+    std::cin.ignore();
+    std::cout << "Czy chesz zaladowac wlasna tablice szyfrujaca? [t/n]" << std::endl;
+    do {
+        std::cin >> choice;
+        if (!(choice == "t" || choice == "n")) {
+            std::cout << "[t/n]?" << std::endl;
+        }
+    } while (!(choice == "t" || choice == "n"));
+}
 
 void SubstitutionCipher::cipher(std::string text) {
-    //std::string processedData = "";
     for (char c : text) {
         bool isUpper = std::isupper(c);
         if (isUpper) {
@@ -25,14 +31,13 @@ void SubstitutionCipher::cipher(std::string text) {
                 }
             }
         }
-    
+        if (c == ' ') {
+            std::cout << " ";
+        }
     }
-    
-    //this->text = processedData;
 }
 
 void SubstitutionCipher::decipher(std::string text) {
-    //std::string processedData = "";
     for (char c : text) {
         bool isUpper = std::isupper(c);
         if (isUpper) {
@@ -51,12 +56,20 @@ void SubstitutionCipher::decipher(std::string text) {
                 }
             }
         }
-
+        if (c == ' ') {
+            std::cout << " ";
+        }
     }
-    //this->text = processedData;
 }
 
 bool SubstitutionCipher::validateInput(std::string data, int mode) {
-
-    return true;
+    std::regex validationRegex("[A-Za-z ]+");
+    bool match = std::regex_match(data, validationRegex);
+    if (match) {
+        return true;
+    } else {
+        std::cout << "Nieprawidłowy format danych." << std::endl;
+        std::cout << "Wpisz jedynie litery alfabetu (bez polskich znakow) i spacje." << std::endl;
+        return false;
+    }
 }

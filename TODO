@@ -1,0 +1,6 @@
+Todo:
+  ✔ zabezpieczenie przed wczytaniem tekstu zamiast liczby @done(20-06-14 10:33)
+  ✔ dodać getline zamiast cin @done(20-06-14 10:25)
+  ☐ wczytywanie tablicy szyfrowania z pliku
+  ☐ dodanie helpa
+  ✔ lepsze komunikaty o błędach @done(20-06-14 10:11)

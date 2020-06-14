@@ -15,6 +15,9 @@ void CaesarCipher::cipher(std::string text) {
             }
             processedData += isUpper ? std::toupper(newChar) : newChar;
         }
+        if (c == ' ') {
+            processedData += " ";
+        }
     }
     this->text = processedData;
 }
@@ -38,17 +41,21 @@ void CaesarCipher::decipher(std::string text) {
             }
             processedData += isUpper ? std::toupper(newChar) : newChar;
         }
+        if (c == ' ') {
+            processedData += " ";
+        }
     }
     this->text = processedData;
 }
 
 bool CaesarCipher::validateInput(std::string data, int mode) {
-    std::regex validationRegex("[A-Za-z]+");
+    std::regex validationRegex("[A-Za-z ]+");
     bool match = std::regex_match(data, validationRegex);
     if (match) {
         return true;
     } else {
         std::cout << "Nieprawidłowy format danych." << std::endl;
+        std::cout << "Wpisz jedynie litery alfabetu (bez polskich znakow) i spacje." << std::endl;
         return false;
     }
 }
