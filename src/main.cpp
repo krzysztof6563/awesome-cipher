@@ -14,6 +14,11 @@ void showIntro() {
 		<< "|  Program szyfrujacy i deszyfrujacy tekst.  |" << std::endl
 		<< "----------------------------------------------" << std::endl
 		<< std::endl
+		<< "Program ma za zadanie zaszyfrowywac i odszyfrowywac wprowadzony tekst." << std::endl
+		<< "Uzytkownik wybiera metode dzialania i algorym szyfrujacy tekst." << std::endl
+		<< "Nastepnie podaje tekst/szyfr do zaszyfrowania/odszyfrowania." << std::endl
+		<< "Wiecej informacji znajduje sie w pliku Readme.txt w folderze" << std::endl
+		<< std::endl
 		<< "Wybierz metode dzialania programu:" << std::endl
 		<< "[1] Zaszyfrowanie tesktu" << std::endl
 		<< "[2] Odszyforwanie tekstu" << std::endl
