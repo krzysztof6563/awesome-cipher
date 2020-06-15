@@ -58,7 +58,7 @@ bool CaesarCipher::validateInput(std::string data, int mode) {
     if (match) {
         return true;
     } else {
-        std::cout << "Nieprawidłowy format danych." << std::endl;
+        std::cout << "Nieprawidlowy format danych." << std::endl;
         std::cout << "Wpisz jedynie litery alfabetu (bez polskich znakow) i spacje." << std::endl;
         return false;
     }

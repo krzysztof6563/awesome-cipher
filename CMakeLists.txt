@@ -5,6 +5,7 @@ project(awesome-cipher)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_FLAGS -static)
 
 # add source to build
 add_subdirectory(src)

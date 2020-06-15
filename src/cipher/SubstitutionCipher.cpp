@@ -12,7 +12,7 @@ SubstitutionCipher::SubstitutionCipher() {
     } while (!(choice == "t" || choice == "n"));
     if (choice == "t") {
         std::string inputName;
-        std::cout << "Podaj nazwę pliku: ";
+        std::cout << "Podaj nazwe pliku: ";
         std::cin >> inputName;
         std::ifstream tabInput;
         std::string tempStr;
@@ -28,9 +28,11 @@ SubstitutionCipher::SubstitutionCipher() {
                 this->cipher_alphabet_upper = tempStr;
                 std::cout << "Wczytano tablice szyfrujaca!!" << std::endl;
             } else {
+                std::cin.ignore();
                 std::cout << "Niepoprawna tablica szyfrujaca, tablica musi posidac 27 znakow. Uzywanie domyslnej tablicy." << std::endl;
             }
         } else {
+            std::cin.ignore();
             std::cout << "Nie udalo sie wczytac pliku, uzywanie domyslnej tablicy" << std::endl;
         }
     } else {
@@ -94,7 +96,7 @@ bool SubstitutionCipher::validateInput(std::string data, int mode) {
     if (match) {
         return true;
     } else {
-        std::cout << "Nieprawidłowy format danych." << std::endl;
+        std::cout << "Nieprawidlowy format danych." << std::endl;
         std::cout << "Wpisz jedynie litery alfabetu (bez polskich znakow) i spacje." << std::endl;
         return false;
     }

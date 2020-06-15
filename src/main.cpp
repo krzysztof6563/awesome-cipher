@@ -101,7 +101,13 @@ auto main(int argc, char* argv[]) -> int {
 			break;
 	}
 	
-	std::cout << selectedCipher->text;
+	std::cout << selectedCipher->text << std::endl;
+
+	#ifdef _WIN32
+		system("pause");
+	#else
+		system("read");
+	#endif
 
 	return 0;
 }
