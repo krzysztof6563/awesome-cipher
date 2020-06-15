@@ -3,6 +3,7 @@
 
 #include "Cipher.h"
 #include <string>
+#include <fstream>
 
 class SubstitutionCipher : public Cipher {
 	public:

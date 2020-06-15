@@ -1,5 +1,9 @@
 #include "CaesarCipher.h"
 
+CaesarCipher::CaesarCipher() {
+	std::cin.ignore();
+}
+
 void CaesarCipher::cipher(std::string text) {
     std::string processedData = "";
     for (char c : text) {

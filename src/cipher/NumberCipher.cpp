@@ -1,5 +1,9 @@
 #include "NumberCipher.h"
 
+NumberCipher::NumberCipher() {
+    std::cin.ignore();
+}
+
 void NumberCipher::cipher(std::string text) {
     std::string processedData = "";
     for (int i = 0; i < text.length(); i++) {

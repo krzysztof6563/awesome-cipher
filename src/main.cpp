@@ -88,7 +88,6 @@ auto main(int argc, char* argv[]) -> int {
 	}
 
 	showDataInput();
-	std::cin.ignore();
 	do {
 		std::getline(std::cin, data);
 	} while (!selectedCipher->validateInput(data, mode));

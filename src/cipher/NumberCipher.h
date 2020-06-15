@@ -6,6 +6,7 @@
 
 class NumberCipher : public Cipher {
 	public:
+		NumberCipher();
 		void cipher(std::string text);
 		void decipher(std::string text);
 		bool validateInput(std::string data, int mode);

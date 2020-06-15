@@ -10,6 +10,32 @@ SubstitutionCipher::SubstitutionCipher() {
             std::cout << "[t/n]?" << std::endl;
         }
     } while (!(choice == "t" || choice == "n"));
+    if (choice == "t") {
+        std::string inputName;
+        std::cout << "Podaj nazwę pliku: ";
+        std::cin >> inputName;
+        std::ifstream tabInput;
+        std::string tempStr;
+
+        tabInput.open(inputName, std::ios::in);
+        if (tabInput.good()) {
+            std::cin.ignore();
+            std::getline(tabInput, tempStr);
+            if (tempStr.length() == 27) {
+                for (auto & c: tempStr) c = tolower(c);
+                this->cipher_alphabet = tempStr;
+                for (auto & c: tempStr) c = toupper(c);
+                this->cipher_alphabet_upper = tempStr;
+                std::cout << "Wczytano tablice szyfrujaca!!" << std::endl;
+            } else {
+                std::cout << "Niepoprawna tablica szyfrujaca, tablica musi posidac 27 znakow. Uzywanie domyslnej tablicy." << std::endl;
+            }
+        } else {
+            std::cout << "Nie udalo sie wczytac pliku, uzywanie domyslnej tablicy" << std::endl;
+        }
+    } else {
+        std::cin.ignore();
+    }
 }
 
 void SubstitutionCipher::cipher(std::string text) {
